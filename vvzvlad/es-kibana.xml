@@ -7,43 +7,29 @@
   <Description>
     This is a container for ElasticSearch+Kibana
   </Description>
-  <Overview></Overview>
-  <Support></Support>
-  <Registry></Registry>
-  <Repository>captinsano/rutorrent</Repository>
+  <Overview> </Overview>
+  <Support> </Support>
+  <Registry> </Registry>
+  <Repository>nshou/elasticsearch-kibana</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>8089</HostPort>
-        <ContainerPort>80</ContainerPort>
+        <HostPort>9200</HostPort>
+        <ContainerPort>9200</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
-	  <Port>
-        <HostPort>8099</HostPort>
-        <ContainerPort>443</ContainerPort>
+      <Port>
+        <HostPort>5601</HostPort>
+        <ContainerPort>5601</ContainerPort>
         <Protocol>tcp</Protocol>
-      </Port>
-	  <Port>
-        <HostPort>45566</HostPort>
-        <ContainerPort>45566</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-	  <Port>
-        <HostPort>9527</HostPort>
-        <ContainerPort>9527</ContainerPort>
-        <Protocol>udp</Protocol>
       </Port>
     </Publish>
   </Networking>
   <Environment>
-	<Variable>
-		<Name>EDGE</Name>
-		<Value>0</Value>
-	</Variable>
-	</Environment>
+  </Environment>
   <Data>
     <Volume>
       <HostDir></HostDir>
@@ -52,7 +38,7 @@
     </Volume>
     <Volume>
       <HostDir></HostDir>
-      <ContainerDir>/download</ContainerDir>
+      <ContainerDir>/usr/share/elasticsearch/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
