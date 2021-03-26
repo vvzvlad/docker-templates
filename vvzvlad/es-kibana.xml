@@ -41,6 +41,6 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:8089]/</WebUI>
-  <Icon>http://i.imgur.com/LWfuAG2.png</Icon>
+  <WebUI>http://[IP]:[PORT:5601]/</WebUI>
+  <Icon>https://cdn.iconscout.com/icon/free/png-512/elasticsearch-226094.png</Icon>
 </Container>
