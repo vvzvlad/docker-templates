@@ -1,19 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Container>
-<Beta>False</Beta>
-<Category>Downloaders:</Category>
-  <Name>ES+Kibana</Name>
-  <Description>
-    This is a container for ElasticSearch+Kibana
-  </Description>
-  <Overview> </Overview>
-  <Support> </Support>
-  <Registry> </Registry>
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ES-Kibana</Name>
   <Repository>nshou/elasticsearch-kibana</Repository>
-  <BindTime>true</BindTime>
+  <Registry/>
+  <Network>br0</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
   <Privileged>false</Privileged>
+  <Support> </Support>
+  <Project/>
+  <Overview>This is a container for ElasticSearch+Kibana&#xD;
+  </Overview>
+  <Category>MediaServer:Other</Category>
+  <WebUI>http://[IP]:[PORT:5601]</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.iconscout.com/icon/free/png-512/elasticsearch-226094.png</Icon>
+  <ExtraParams>-e "discovery.type=single-node"  -e "ES_JAVA_OPTS=-Xmx512m -Xms512m" -e http.cors.enabled=true -e http.cors.allow-origin=* -e node.name=elasticsearch -e cluster.initial_master_nodes=elasticsearch</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1616804068</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>This is a container for ElasticSearch+Kibana&#xD;
+  </Description>
   <Networking>
-    <Mode>bridge</Mode>
+    <Mode>br0</Mode>
     <Publish>
       <Port>
         <HostPort>9200</HostPort>
@@ -27,20 +38,22 @@
       </Port>
     </Publish>
   </Networking>
-  <Environment>
-  </Environment>
   <Data>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir>/mnt/user/appdata/es-kibana-1</HostDir>
+      <ContainerDir>/home/elasticsearch/elasticsearch-7.10.1/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/ES+Kibana</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
-    <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/usr/share/elasticsearch/data</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:5601]/</WebUI>
-  <Icon>https://cdn.iconscout.com/icon/free/png-512/elasticsearch-226094.png</Icon>
+  <Environment/>
+  <Labels/>
+  <Config Name="ES Port" Target="9200" Default="9200" Mode="tcp" Description="Container Port: 9200" Type="Port" Display="always" Required="true" Mask="false">9200</Config>
+  <Config Name="Kibana port" Target="5601" Default="5601" Mode="tcp" Description="Container Port: 5601" Type="Port" Display="always" Required="true" Mask="false">5601</Config>
+  <Config Name="Data Path" Target="/home/elasticsearch/elasticsearch-7.10.1/data" Default="" Mode="rw" Description="Container Path: /usr/share/elasticsearch/data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/es-kibana-1</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/ES+Kibana" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ES+Kibana</Config>
 </Container>
