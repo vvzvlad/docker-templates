@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>MQTT to Spotify</Name>
+  <Repository>vvzvlad/mqtt2spotify</Repository>
+  <Registry/>
+  <Network>br0</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support> </Support>
+  <Project/>
+  <Overview>This is a container for mqtt2spotify&#xD;
+  </Overview>
+  <Category>MediaServer:Other</Category>
+  <WebUI></WebUI>
+  <TemplateURL/>
+  <Icon>https://www.gerbenlaw.com/wp-content/uploads/2020/06/spotify-e1593107306258.png</Icon>
+  <ExtraParams></ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1616807125</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>This is a container for mqtt2spotify&#xD;
+  </Description>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/mqtt2spotify</HostDir>
+      <ContainerDir>/root/mqtt2spotify</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Data Path" Target="/root/mqtt2spotify" Default="" Mode="rw" Description="Container Path: /root/mqtt2spotify" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mqtt2spotify</Config>
+</Container>
