@@ -3,7 +3,7 @@
   <Name>MQTT to Spotify</Name>
   <Repository>vvzvlad/mqtt2spotify</Repository>
   <Registry/>
-  <Network>br0</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
