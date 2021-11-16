@@ -31,11 +31,11 @@
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/mqtt2spotify</HostDir>
-      <ContainerDir>/root/mqtt2spotify</ContainerDir>
+      <ContainerDir>/root/mqtt2spotify/auth</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment/>
   <Labels/>
-  <Config Name="Data Path" Target="/root/mqtt2spotify" Default="" Mode="rw" Description="Container Path: /root/mqtt2spotify" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mqtt2spotify</Config>
+  <Config Name="Data Path" Target="/root/mqtt2spotify/auth" Default="" Mode="rw" Description="Container Path: /root/mqtt2spotify/auth" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mqtt2spotify</Config>
 </Container>
