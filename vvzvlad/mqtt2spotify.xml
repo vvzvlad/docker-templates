@@ -1,41 +1,46 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>MQTT to Spotify</Name>
-  <Repository>vvzvlad/mqtt2spotify</Repository>
-  <Registry/>
+  <Name>MQTT2Spotify</Name>
+  <Repository>vvzvlad/universalpydocker</Repository>
+  <Registry>https://hub.docker.com/r/vvzvlad/universalpydocker/</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support> </Support>
+  <Support>https://hub.docker.com/r/vvzvlad/universalpydocker/</Support>
   <Project/>
-  <Overview>This is a container for mqtt2spotify&#xD;
-  </Overview>
-  <Category>MediaServer:Other</Category>
-  <WebUI></WebUI>
+  <Overview>App for MQTT2Spotify bridge&#xD;
+https://hub.docker.com/r/vvzvlad/universalpydocker/</Overview>
+  <Category>HomeAutomation:</Category>
+  <WebUI/>
   <TemplateURL/>
   <Icon>https://www.gerbenlaw.com/wp-content/uploads/2020/06/spotify-e1593107306258.png</Icon>
-  <ExtraParams></ExtraParams>
+  <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1616807125</DateInstalled>
+  <DateInstalled>1637260319</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Description>This is a container for mqtt2spotify&#xD;
-  </Description>
+  <Description>App for MQTT2Spotify bridge&#xD;
+https://hub.docker.com/r/vvzvlad/universalpydocker/</Description>
   <Networking>
-    <Mode>br0</Mode>
-    <Publish>
-    </Publish>
+    <Mode>bridge</Mode>
+    <Publish/>
   </Networking>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/mqtt2spotify</HostDir>
-      <ContainerDir>/root/mqtt2spotify/auth</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment/>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value>https://github.com/vvzvlad/mqtt2spotify.git </Value>
+      <Name>gitcloneaddress</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>paho-mqtt spotipy</Value>
+      <Name>pippackages</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
   <Labels/>
-  <Config Name="Data Path" Target="/root/mqtt2spotify/auth" Default="" Mode="rw" Description="Container Path: /root/mqtt2spotify/auth" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mqtt2spotify</Config>
+  <Config Name="Git repo address" Target="gitcloneaddress" Default="" Mode="" Description="Git repo address for clone and run in container" Type="Variable" Display="always" Required="false" Mask="false">https://github.com/vvzvlad/mqtt2spotify.git </Config>
+  <Config Name="Install pip packages" Target="pippackages" Default="" Mode="" Description="Install pip packages list" Type="Variable" Display="always" Required="false" Mask="false">paho-mqtt spotipy</Config>
 </Container>
