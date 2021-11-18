@@ -18,7 +18,7 @@ https://hub.docker.com/r/vvzvlad/universalpydocker/</Overview>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1637260319</DateInstalled>
+  <DateInstalled>1637260516</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>App for MQTT2Spotify bridge&#xD;
@@ -27,7 +27,13 @@ https://hub.docker.com/r/vvzvlad/universalpydocker/</Description>
     <Mode>bridge</Mode>
     <Publish/>
   </Networking>
-  <Data/>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/mqtt2spotify</HostDir>
+      <ContainerDir>/root/pyapp/auth</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
   <Environment>
     <Variable>
       <Value>https://github.com/vvzvlad/mqtt2spotify.git </Value>
@@ -43,4 +49,5 @@ https://hub.docker.com/r/vvzvlad/universalpydocker/</Description>
   <Labels/>
   <Config Name="Git repo address" Target="gitcloneaddress" Default="" Mode="" Description="Git repo address for clone and run in container" Type="Variable" Display="always" Required="false" Mask="false">https://github.com/vvzvlad/mqtt2spotify.git </Config>
   <Config Name="Install pip packages" Target="pippackages" Default="" Mode="" Description="Install pip packages list" Type="Variable" Display="always" Required="false" Mask="false">paho-mqtt spotipy</Config>
+  <Config Name="Auth data Path" Target="/root/pyapp/auth" Default="/mnt/user/appdata/mqtt2spotify" Mode="rw" Description="Container Path: /root/pyapp/auth" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mqtt2spotify</Config>
 </Container>
